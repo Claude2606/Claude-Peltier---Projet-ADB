@@ -1,0 +1,11 @@
+Maquette basse fidélité (desktop) : https://www.figma.com/design/3ZJmzwLCSloLG8AypcbsNY/Maquette-Basse-Fid%C3%A9lit%C3%A9-(Desktop)?m=dev&node-id=0-1&t=2Gbyt5U7X6LeSv6K-1
+
+Maquette basse fidélité (mobile) : https://www.figma.com/design/UuWYVDFUmGoNYbAyfZniu1/Maquette-Basse-Fid%C3%A9lit%C3%A9-(Mobile)?m=dev&node-id=0-1&t=TyinIyf6O0zTWR7t-1
+
+Maquette moyenne fidélité (desktop) : https://www.figma.com/design/SZz0uqvxPj9x37ASYtszhu/Maquette-Moyenne-Fid%C3%A9lit%C3%A9-(Desktop)?m=dev&node-id=0-1&t=2aG9YestAmTauR3c-1
+
+Maquette moyenne fidélité (mobile) : https://www.figma.com/design/juAHlKYKWZl981E1WyWybT/Maquette-Moyenne-Fid%C3%A9lit%C3%A9-(Mobile)?m=dev&node-id=6-226&t=OkLAxTtxTuU3kGJF-1
+
+Maquette haute fidélité (desktop) : https://www.figma.com/design/earcaj1ZBt9Hs1anTzGOka/Maquette-Haute-Fid%C3%A9lit%C3%A9-(Desktop)?m=dev&node-id=0-1&t=2iMihNkaXlJXpjLr-1
+
+Maquette haute fidélité (mobile) : https://www.figma.com/design/ZdxANuIdpxVfjN6HBSZ7TD/Maquette-Haute-Fid%C3%A9lit%C3%A9-(Mobile)?m=dev&node-id=0-1&t=7LuBSk7Kl6wcszTZ-1
