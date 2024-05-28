@@ -65,18 +65,30 @@ function login($username,$password){
 
     try{
         $stmtUsers->execute();
-     }
+    }
      catch(PDOException $e){
-         $message = "Erreur 2";
-     }
-     $user = $stmtUsers->fetch();
+        $message = "Erreur lors de la connexion";
+    }
+    $user = $stmtUsers->fetch();
 
-     if ($user && password_verify($password, $user ['password'])) {
+    if ($user && password_verify($password, $user ['password'])) {
         $_SESSION['user'] = $user;
         return "Connexion réussi.";
-     }
-     else {
+    }
+    else {
         return "Nom d'utilisateur ou mot de passe incorrect.";
-     }
+    }
+
+    $sqlVerifyUser = "SELECT username, password FROM user WHERE username = ?";
+    $stmtVerifyUsers = $bdd->prepare($sqlVerifyUser);
+    $stmtVerifyUsers->bindParam(":username",$username);
+
+    try{
+        $stmtVerifyUsers->execute();
+    }
+    catch(PDOException $e){
+        $message = "Nom d'utilisateur incorrect !";
+    }
+    $user = $stmtVerifyUsers->fetch();
 }
 ?>
