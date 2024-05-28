@@ -78,17 +78,4 @@ function login($username,$password){
     else {
         return "Nom d'utilisateur ou mot de passe incorrect.";
     }
-
-    $sqlVerifyUser = "SELECT username, password FROM user WHERE username = ?";
-    $stmtVerifyUsers = $bdd->prepare($sqlVerifyUser);
-    $stmtVerifyUsers->bindParam(":username",$username);
-
-    try{
-        $stmtVerifyUsers->execute();
-    }
-    catch(PDOException $e){
-        $message = "Nom d'utilisateur incorrect !";
-    }
-    $user = $stmtVerifyUsers->fetch();
-}
 ?>
