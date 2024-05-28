@@ -78,4 +78,5 @@ function login($username,$password){
     else {
         return "Nom d'utilisateur ou mot de passe incorrect.";
     }
+}
 ?>
