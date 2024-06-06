@@ -109,7 +109,7 @@ header {
     align-items: center;
     width: 90px;
     height: 90px;
-    background-color: #e6af2e;
+    background-color: red;
     border-radius: 60px;
     cursor: pointer;
     transition: 0.2s linear;
@@ -131,8 +131,8 @@ header {
     height: 90px;
 }
 
-.deconnect {
-    color: red;
+form input[type=submit] {
+    background-color: red;
 }
 
 /* Section 1 */
