@@ -19,7 +19,6 @@ if(isset($_SESSION['user'])){
 <form action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/GalerieArt/model/userController.php" method="POST">
     <input type="submit" value="Deconnexion" name="bDeconnect">
 </form>
-
 <?php 
 }
 ?>

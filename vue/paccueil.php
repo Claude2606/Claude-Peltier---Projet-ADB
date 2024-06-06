@@ -4,7 +4,15 @@ include('header.php');
 ?>
 
 <header>
-    <div></div>
+
+    <div>
+    <!-- Le bouton déconnexion apparaît -->
+    <form action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/GalerieArt/controller/userController.php" method="POST">
+        <input class="deconnect" type="submit" value="Deconnexion" name="bDeconnect">
+    </form>
+    </div>
+
+
     <div class="logo">
         <a href="paccueil.php"><img src="../assets/Logo.png" alt="Logo galerie d'art"></a>
     </div>

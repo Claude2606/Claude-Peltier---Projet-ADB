@@ -131,6 +131,10 @@ header {
     height: 90px;
 }
 
+.deconnect {
+    color: red;
+}
+
 /* Section 1 */
 
 .fond {
