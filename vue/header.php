@@ -18,5 +18,5 @@ if(isset($_SESSION['user'])){
 <!-- Le bouton déconnexion apparaît -->
 <form action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/GalerieArt/model/userController.php" method="POST">
     <input type="submit" value="Deconnexion" name="bDeconnect">
-</form>
+    </form>
 <?php };?>

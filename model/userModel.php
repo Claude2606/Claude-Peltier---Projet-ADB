@@ -90,6 +90,6 @@ function login($username,$password){
 
 // Fonction qui permet de déconnecter l'utilisateur (supprime les données qui sont stockées en session)
 function logout(){
-    session_destroy();
- }
+   session_destroy();
+}
 ?>

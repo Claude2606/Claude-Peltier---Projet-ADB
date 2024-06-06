@@ -44,6 +44,15 @@ else if(isset($_POST['bconnexion'])){
     // On appelle la fonction login
     login($username,$password);
     // On le redirige vers l'accueil
-    header("Location: ../vue/paccueil.php");exit;
+    header("Location: ../vue/paccueil.php");
+    exit;
+
+} 
+// Si l'utilisateur a appuyer sur le bouton deconnexion
+else if (isset($_POST['bDeconnect'])) {
+    //On appelle la fonction déconnexion
+    logout();
+    header("Location: vue/pconnexion.php");
+    exit;
 }
 ?>
