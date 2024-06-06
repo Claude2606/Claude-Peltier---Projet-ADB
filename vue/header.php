@@ -8,4 +8,15 @@
 </head>
 <body>
     
-<?php session_start();?>
+<!-- On démarre la session dans le header -->
+<?php session_start();
+
+// Si l'utilisateur est connecté
+if(isset($_SESSION['user'])){
+
+?>
+<!-- Le bouton déconnexion apparaît -->
+<form action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/GalerieArt/model/userController.php" method="POST">
+    <input type="submit" value="Deconnexion" name="bDeconnect">
+</form>
+<?php };?>

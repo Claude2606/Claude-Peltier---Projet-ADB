@@ -1,6 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."/GalerieArt/model/dbconnect.php");
 
+//Insertion de données
 function insertData($prenom,$nom,$username,$password){
     // Récupère les données de la base de données
     global $bdd;
@@ -17,7 +18,7 @@ function insertData($prenom,$nom,$username,$password){
     $stmtUserData->bindParam(":prenom_user",$prenom);
     $stmtUserData->bindParam(":nom_user",$nom);
 
-    //Exécuter la requête SQL
+    //Exécution de la requête SQL
     try {
         $stmtUserData->execute();
     }
@@ -41,6 +42,7 @@ function insertData($prenom,$nom,$username,$password){
 
     // Requête SQL pour insérer les données dans user
     $querysqlData = "INSERT INTO user (username, password, role, user_id) VALUES (:username, :password, :role, :user_id)";
+    //Prépare la requête SQL
     $stmtUserInsert = $bdd->prepare($querysqlData);
     $stmtUserInsert->bindParam(":username",$username);
     $stmtUserInsert->bindParam(":password",$password);
@@ -53,11 +55,15 @@ function insertData($prenom,$nom,$username,$password){
     catch(PDOException $e) {
         return "Une erreur s'est produite lors de l'insertion des données de connexion: " . $e->getMessage();
     }
+    // Si message d'erreur, on le retourne
     if(isset($message)){return $message;}
 }
 
+// Fonction de vérification avant connexion
 function login($username,$password){
+    //Récupération de la connexion à la BDD
     global $bdd;
+    //Préparation de la requete qui permet de vérifier si l'utilisateur correspond à un utilisateur de base de données
     $sqlUser = "SELECT * FROM `user` join user_data where user.user_data_id = user_data_id AND username= :username AND password= :password";
     $stmtUsers = $bdd->prepare($sqlUser);
     $stmtUsers->bindParam(":username",$username);
@@ -69,8 +75,10 @@ function login($username,$password){
      catch(PDOException $e){
         $message = "Erreur lors de la connexion";
     }
+    //On récupère les données de la base de données dans un tableau
     $user = $stmtUsers->fetch();
 
+    //Si le mdp correspond, on stock le tableau dans une variable session
     if ($user && password_verify($password, $user ['password'])) {
         $_SESSION['user'] = $user;
         return "Connexion réussi.";
@@ -79,4 +87,9 @@ function login($username,$password){
         return "Nom d'utilisateur ou mot de passe incorrect.";
     }
 }
+
+// Fonction qui permet de déconnecter l'utilisateur (supprime les données qui sont stockées en session)
+function logout(){
+    session_destroy();
+ }
 ?>
