@@ -131,9 +131,20 @@ header {
     height: 90px;
 }
 
-/* form input[type=submit] {
-    background-color: red;
-} */
+input[type=submit] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #E6AF2E;
+    font-size: 20px;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    text-decoration: underline;
+}
 
 /* Section 1 */
 

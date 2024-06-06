@@ -8,7 +8,7 @@ include('header.php');
     <div>
     <!-- Le bouton déconnexion apparaît -->
     <form action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/GalerieArt/controller/userController.php" method="POST">
-        <input class="deconnect" type="submit" value="Deconnexion" name="bDeconnect">
+        <input class="deconnect" type="submit" value="Déconnexion" name="bDeconnect">
     </form>
     </div>
 
