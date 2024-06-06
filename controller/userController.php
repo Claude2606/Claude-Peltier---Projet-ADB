@@ -52,7 +52,7 @@ else if(isset($_POST['bconnexion'])){
 else if (isset($_POST['bDeconnect'])) {
     //On appelle la fonction déconnexion
     logout();
-    header("Location: vue/pconnexion.php");
+    header("Location: ../index.php");
     exit;
 }
 ?>
